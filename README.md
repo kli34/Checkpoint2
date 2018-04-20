@@ -1,7 +1,7 @@
 # Checkpoint2
 
-*Datasets: World college ranking
-*These colleges are ranked by location, national rank, quality of education, alumni employee, quality of faculty, publications, influences, citations, board impact, and patents, then it calculate a final score for ranking. 
+1.Datasets: World college ranking
+1.These colleges are ranked by location, national rank, quality of education, alumni employee, quality of faculty, publications, influences, citations, board impact, and patents, then it calculate a final score for ranking. 
 
 
 National Rank: basically order the final score for each colleges
