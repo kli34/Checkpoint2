@@ -1,4 +1,19 @@
 # Checkpoint2
+
+Datasets: World college ranking
+These colleges are ranked by location, national rank, quality of education, alumni employee, quality of faculty, publications, influences, citations, board impact, and patents, then it calculate a final score for ranking. 
+National Rank: basically order the final score for each colleges
+Quality of Education: it was calcualted from students' overall GPA from classes
+Alumni Employee: It focues on amount student who graduated from their old school and keep working there
+Quality of faculty: Based on teacher evaluation from students
+Publication: based on the sales volume from school's publication (book or research)
+influences: basically calcualte the amount of honorees and Distinguished Alumni
+Citation: It is just amount of citation
+Board Impact: influence created by the board of directors
+Patent: The number of patent they created 
+
+Business Question: From this dataset, we can answer what colleges is the best in UK or some other countries, we can also find out the colleges have score below maybe 60 or 70. We are able to rank influences from highest to lowest. 
+
 1. -- Rank the quality_of_education from the lowest to highest in the US
 
 ```SQL
@@ -33,6 +48,7 @@ WHERE score between '80' and '100'
 GROUP BY publications
 ORDER BY n_score DESC
 ```
+
 ![Checkpoint2](Visualization/CP-3.png)
 
 
@@ -46,6 +62,7 @@ WHERE citations between '100' and '300'
 GROUP BY institution, world_rank
 ORDER BY institution DESC
 ```
+
 ![Checkpoint2](Visualization/CP-4.png)
 
 
@@ -58,6 +75,7 @@ Where location = 'USA' AND alumni_employment between '270' AND '600'
 GROUP BY institution, location,alumni_employment
 ORDER BY alumni_employment DESC
 ```
+
 ![Checkpoint2](Visualization/CP-5.png)
 
 
@@ -69,6 +87,7 @@ FROM datasets.world_college_ranking
 WHERE score <= '60'
 ORDER BY score DESC
 ```
+
 ![Checkpoint2](Visualization/CP-6.png)
 
 
@@ -80,6 +99,7 @@ FROM datasets.world_college_ranking
 WHERE broad_impact <= '300'
 ORDER BY broad_impact DESC
 ```
+
 ![Checkpoint2](Visualization/CP-7.png)
 
 
@@ -102,6 +122,7 @@ FROM datasets.world_college_ranking
 WHERE location = 'Japan' 
 ORDER BY influence DESC
 ```
+
 ![Checkpoint2](Visualization/CP-9.png)
 
 
@@ -113,5 +134,6 @@ FROM datasets.world_college_ranking
 WHERE national_rank between '15' and '270' AND quality_of_education between '150' and '400'
 ORDER BY national_rank, quality_of_education DESC
 ```
+
 ![Checkpoint2](Visualization/CP-10.png)
 
